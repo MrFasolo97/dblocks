@@ -112,7 +112,7 @@ export default class extends view {
                 weight: acc.data.pub_weight
             }))
             $('#acc-customkey').append(this.customKeyHtml(acc.data.keys))
-            $('#acc-profile-dtube').attr('href','https://d.tube/#!/c/' + acc.data.name)
+            $('#acc-profile-dtube').attr('href','https://dtube.app/#!/c/' + acc.data.name)
 
             if (acc.data.auths && acc.data.auths.length > 0) {
                 $('#acc-auth').append(this.accountAuthsHtml(acc.data.auths))

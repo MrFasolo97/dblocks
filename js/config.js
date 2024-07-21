@@ -1,5 +1,5 @@
 window.config = {
-    api: 'https://avalon.luminade.fun',
+    api: 'https://api.avalonblocks.com',
     isTestnet: false,
     masterDao: 'dtube',
     // nextHf: {
@@ -7,6 +7,6 @@ window.config = {
     //     codename: 'Space Odyssey',
     //     block: 17150000,
     //     releaseSrc: 'GitHub',
-    //     releaseUrl: 'https://github.com/dtube/avalon/releases/tag/1.6'
+    //     releaseUrl: 'https://github.com/MrFasolo97/avalon'
     // }
 }

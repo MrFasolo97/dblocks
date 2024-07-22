@@ -309,6 +309,7 @@ function initNodeUrl() {
 }
 
 function testnetSwitcher() {
+    window.lastBlockShown = false;
     let isTestnet = localStorage.getItem('is-testnet')
     let mainnetNode = localStorage.getItem('mainnet-node');
     if (isTestnet == 'true') {

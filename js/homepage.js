@@ -43,13 +43,13 @@ export default class extends view {
                     </table><br>
                     <h3>Chain Properties</h3>
                     <table class="table table-sm" id="dblocks-props-tbl"><tbody>
-                        <tr><th scope="row">Chain ID</th><td>da5fe18d0844f1f97bf5a94e7780dec18b4ab015e32383ede77158e059bacbb2</td></tr>
+                        <tr><th scope="row">Chain ID</th><td>89b3b910f5a465a273d017b9df3d4ab3b4ba571e8e87dffdfecc39dfef2741dd</td></tr>
                         <tr><th scope="row">Block Time</th><td>3 seconds</td></tr>
                         <tr><th scope="row">VP Growth</th><td>1 VP/DTUBE/hour</td></tr>
                         <tr><th scope="row">VP per burn</th><td>4,400 VP/DTUBE</td></tr>
                         <tr><th scope="row">BW Growth</th><td>10 bytes/DTUBE/hour</td></tr>
                         <tr><th scope="row">BW Max</th><td>64,000 bytes</td></tr>
-                        <tr><th scope="row">Leaders</th><td>15</td></tr>
+                        <tr><th scope="row">Leaders</th><td>5</td></tr>
                         <tr><th scope="row">Block Reward</th><td>0.01 DTUBE</td></tr>
                         <tr><th scope="row">Block Reward VP</th><td>100 VP</td></tr>
                         <tr><th scope="row">Master account</th><td>dtube</td></tr>

@@ -309,9 +309,8 @@ function initNodeUrl() {
 }
 
 function testnetSwitcher() {
-    window.lastBlockShown = false;
     let isTestnet = localStorage.getItem('is-testnet')
-    let mainnetNode = localStorage.getItem('mainnet-node');
+    let mainnetNode = localStorage.getItem('mainnet-node')
     if (isTestnet == 'true') {
         if (mainnetNode == "null") {
             config.api = "https://api.avalonblocks.com"
@@ -327,6 +326,7 @@ function testnetSwitcher() {
         console.log("Switching to testnet")
     }
     testnetBadge()
+    location.reload()
 }
 
 function loadLogin(auth) {

@@ -124,7 +124,8 @@ function listWords(arr = []) {
 }
 
 function testnetBadge() {
-    if (window.config.isTestnet)
+    let isTestnet = localStorage.getItem('is-testnet')
+    if (isTestnet || window.config.isTestnet)
         $('#testnet-heading-badge').show()
 }
 
@@ -294,6 +295,17 @@ function initNodeUrl() {
         evt.preventDefault()
         localStorage.setItem('api-node',$('#api-node-url').val())
         $('#api-switcher-modal').modal('toggle')
+    })
+    $('#testnet-enabled').on('click',(evt) => {
+        evt.preventDefault()
+        let storedAPINode2 = localStorage.getItem('api-node')
+        if (localStorage.getItem('is-testnet')) {
+            config.api = storedAPINode2
+        } else {
+            config.api = "https://testnet.dtube.fso.ovh"
+        }
+        localStorage.setItem('mainnet-node', )
+        localStorage.setItem('is-testnet',!localStorage.getItem("is-testnet"));
     })
 }
 

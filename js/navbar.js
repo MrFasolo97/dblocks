@@ -125,8 +125,13 @@ function listWords(arr = []) {
 
 function testnetBadge() {
     let isTestnet = localStorage.getItem('is-testnet')
-    if (isTestnet || window.config.isTestnet)
+    if (isTestnet != "true") {
+        $('#testnet-heading-badge').hide()
+        $('#testnet-switcher').prop("checked", false)
+    } else {
         $('#testnet-heading-badge').show()
+        $('#testnet-switcher').prop("checked", true)
+    }
 }
 
 function fetchLastBlockAge(cb) {
@@ -296,17 +301,31 @@ function initNodeUrl() {
         localStorage.setItem('api-node',$('#api-node-url').val())
         $('#api-switcher-modal').modal('toggle')
     })
-    $('#testnet-enabled').on('click',(evt) => {
-        evt.preventDefault()
-        let storedAPINode2 = localStorage.getItem('api-node')
-        if (localStorage.getItem('is-testnet')) {
-            config.api = storedAPINode2
+    let isTestnet = localStorage.getItem('is-testnet')
+    if (isTestnet == 'true') {
+        config.api = 'https://testnet.dtube.fso.ovh'
+    }
+    testnetBadge()
+}
+
+function testnetSwitcher() {
+    let isTestnet = localStorage.getItem('is-testnet')
+    let mainnetNode = localStorage.getItem('mainnet-node');
+    if (isTestnet == 'true') {
+        if (mainnetNode == "null") {
+            config.api = "https://api.avalonblocks.com"
         } else {
-            config.api = "https://testnet.dtube.fso.ovh"
+            config.api = mainnetNode
         }
-        localStorage.setItem('mainnet-node', )
-        localStorage.setItem('is-testnet',!localStorage.getItem("is-testnet"));
-    })
+        localStorage.setItem('is-testnet', 'false')
+        console.log("Switching to mainnet")
+    } else {
+        config.api = 'https://testnet.dtube.fso.ovh'
+        localStorage.setItem('is-testnet', 'true')
+        localStorage.setItem('mainnet-node', mainnetNode)
+        console.log("Switching to testnet")
+    }
+    testnetBadge()
 }
 
 function loadLogin(auth) {
@@ -327,3 +346,5 @@ function loadLogin(auth) {
     })
     $('#auth-btn').text(auth.username)
 }
+
+window.testnetSwitcher = testnetSwitcher;

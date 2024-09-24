@@ -3,5 +3,6 @@ export default {
     'dtube.airdrop': 'Blackhole',
     'dtube.swap': 'Bridge',
     'dtube.cold': 'Bridge - Cold Wallet',
-    'ionomy': 'Exchange'
+    'ionomy': 'Exchange',
+    'waves.bridge': 'Bridge'
 }

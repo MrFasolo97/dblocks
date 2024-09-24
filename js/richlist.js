@@ -13,7 +13,8 @@ export default class extends view {
         this.excludedAccs = [
             'dtube.swap',
             'dtube.cold',
-            'ionomy'
+            'ionomy',
+            'waves.bridge'
         ]
     }
 

@@ -74,7 +74,7 @@ window.router = async () => {
             path: '/signer',
             view: signer,
             scripts: {
-                JSONEditor: 'lib/jsoneditor/jsoneditor-minimalist.js',
+                JSONEditor: 'lib/jsoneditor/jsoneditor-minimalist.min.js',
                 ace: 'lib/jsoneditor/ace/ace.js'
             }
         },
@@ -83,7 +83,7 @@ window.router = async () => {
             view: signer,
             params: 1,
             scripts: {
-                JSONEditor: 'lib/jsoneditor/jsoneditor-minimalist.js',
+                JSONEditor: 'lib/jsoneditor/jsoneditor-minimalist.min.js',
                 ace: 'lib/jsoneditor/ace/ace.js'
             }
         },
